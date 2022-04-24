@@ -1,12 +1,12 @@
 " Vim color file
-" Name:       simple-dark
-" Maintainer: Devon / Tek256 <Devon@tek256.com>
-" Homepage:   https://github.com/tek256/simple-dark
-" Note: This originally started as a fork of 256_noir.vim
-" Basically: dark background, with different shades of gray.
+" Name:            simple-dark
+" Original Author: Devon / Tek256 <Devon@tek256.com>
+" Fork Author:     Maxim Kasyanenko / mxi
+" Homepage:        https://github.com/tek256/simple-dark
+" Note:            This originally started as a fork of 256_noir.vim
+" Basically:       dark background, with different shades of gray.
+" Fork:            Make comments lighter and highlights brighter.
 
-highlight clear
-set background=dark
 if version > 580
     " no guarantees for version 5.8 and below, but this makes it stop
     " complaining
@@ -14,20 +14,23 @@ if version > 580
         syntax reset
     endif
 endif
-let g:colors_name = "simple-dark"
+
+let g:colors_name = "suckless-dark"
 
 if has("gui_running") || &t_Co == 256
-	hi NonText cterm=NONE ctermfg=black ctermbg=black gui=NONE guifg=bg guibg=#0a0a0a
+    hi NonText cterm=NONE ctermfg=black ctermbg=black gui=NONE guifg=bg guibg=#0a0a0a
     hi Normal cterm=NONE ctermfg=250 ctermbg=black gui=NONE guifg=#bcbcbc guibg=#0a0a0a
     hi Keyword cterm=NONE ctermfg=255 ctermbg=black gui=NONE guifg=#eeeeee guibg=#0a0a0a
     hi Constant cterm=NONE ctermfg=252 ctermbg=black gui=NONE guifg=#d0d0d0 guibg=#0a0a0a
     hi String cterm=NONE ctermfg=245 ctermbg=black gui=NONE guifg=#8a8a8a guibg=#0a0a0a
-    hi Comment cterm=NONE ctermfg=240 ctermbg=black gui=NONE guifg=#585858 guibg=#0a0a0a
+    hi Comment cterm=NONE ctermfg=245 ctermbg=black gui=NONE guifg=#8a8a8a guibg=#0a0a0a
     hi Number cterm=NONE ctermfg=255  ctermbg=black gui=NONE guifg=#eeeeee guibg=#0a0a0a
     hi Error cterm=NONE ctermfg=255 ctermbg=DarkGray gui=NONE guifg=#eeeeee guibg=#0a0a0a
     hi ErrorMsg cterm=NONE ctermfg=255 ctermbg=DarkGray gui=NONE guifg=#eeeeee guibg=#0a0a0a
-    hi Search cterm=NONE ctermfg=245 ctermbg=Gray gui=NONE guifg=#8a8a8a guibg=#0a0a0a
-    hi IncSearch cterm=reverse ctermfg=255 ctermbg=245 gui=reverse guifg=#eeeeee guibg=#0a0a0a
+    " TODO Search cterm colors
+    hi Search cterm=reverse ctermfg=245 ctermbg=Gray gui=reverse guifg=#00907f guibg=#000000
+    " TODO IncSearch cterm colors
+    hi IncSearch cterm=reverse ctermfg=255 ctermbg=245 gui=reverse guifg=#00ffc0 guibg=#000000
     hi DiffChange cterm=NONE ctermfg=240 ctermbg=255 gui=NONE guifg=#8a8a8a guibg=#0a0a0a
     hi DiffText cterm=bold ctermfg=255 ctermbg=DarkGray gui=bold guifg=#bcbcbc guibg=#0a0a0a
     hi SignColumn cterm=NONE ctermfg=240 ctermbg=black gui=NONE guifg=#8a8a8a guibg=#0a0a0a
@@ -51,7 +54,7 @@ else
     hi Keyword cterm=NONE ctermfg=White ctermbg=Black
     hi Constant cterm=NONE ctermfg=Gray ctermbg=Black
     hi String cterm=NONE ctermfg=Gray ctermbg=Black
-    hi Comment cterm=NONE ctermfg=DarkGray ctermbg=Black
+    hi Comment cterm=NONE ctermfg=Gray ctermbg=Black
     hi Number cterm=NONE ctermfg=White ctermbg=Black
     hi Error cterm=NONE ctermfg=White ctermbg=Black
     hi ErrorMsg cterm=NONE ctermfg=White ctermbg=Black
